@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Sebastián Nájera</title>
+
+    <link rel="icon" type="image/png" href="Recursos/img/LEscCapu.png">
+
+    <style>
+        /*CSS-Diseño, configurar en cascada(Esto si es un lenguaje de progra)*/
+        :root {
+            --verde-premium: #1a3a1e;
+            --dorado-suave: #d4af37;
+            --blanco-puro: #fafafa;
+            --gris-fondo: #f4f4f4;
+            --texto-oscuro: #2c3e50;
+        }
+        
+        html, body{
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--gris-fondo); /*Fondo suave, no negro */
+            color: var(--texto-oscuro);
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header{
+            padding: 40px 20px;
+            background-color: var(--verde-premium);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        /*EFECTO: Título con sombra blanca */
+        header h1{
+            margin: 0;
+            color: var(--blanco-puro);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            /* Sombra blanca suave para dar relieve */
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+        }
+
+        main{
+            flex: 1;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /*Efecto Zoom al pasar el cursos*/
+        .card-semana:hover {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1)
+            border-color: var(--dorado-suave)
+        }
+
+        .card-semana h2 {
+            color: var(--verde-premium)
+            margin-top: 0;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /*un pequeño detalle decorativo antes del título*/
+        .card-semana h2::before {
+            content: "•";
+            color: var(--dorado-suave)
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .contenido-info {
+            line-height: 1.6;
+            color: #555
+        }
+
+        h4{
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: var(--verde-premium);
+            border-bottom: 2px solid var(--dorado-suave);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: var(--blanco-puro);
+            border-top: 1px solid #eee;
+        }
+
+        footer span{
+            font-style: italic;
+            color: #888;
+            font-weight: 300;
+        }
+        .logo-container img:hover {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1,275);
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .video-container {
+            margin-top: 30px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 10´x 25px rgba(0,0,0,0.05)
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .video-container:hover {
+            border-color: var(--dorado-suave);
+            transform: translateY(-3px);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            outline: none;
+        }
+
+        video::-webkit-media-controls-panel {
+            background-color: var(--blanco-puro);
+        }
+
+        video::-webkit-media-controls-play-button,
+        video::-webkit-media-controls-current-time-display,
+        video::-webkit-media-controls-time-remaining-display {
+            color: var(--verde-premium);
+        }
+
+        video::-webkit-media-controls-timeline {
+            background-color: var(--gris-fondo);
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitácora Segunda y Tercera unidad</h1>
+    </header>
+
+    <main>
+        <h4>Contenido de la página web</h4>
+        <p>Bienvenido a la experiencia visual de Nájera</p>
+        <section class="card-semana"
+        <h2>Semana!: Introduccion a Arduino</h2>
+            <p>
+                Arduino es una plataforma de electrónica de código abierto que combina hardware flexible (placas con microcontroladores) y software sencillo (un lenguaje de programación basado en C++) para permitir que cualquier persona pueda crear objetos interactivos. Funciona como un cerebro electrónico capaz de leer información de su entorno mediante sensores —como luz, temperatura o movimiento— y reaccionar activando dispositivos como motores, luces o pantallas. Gracias a su filosofía de código abierto, su bajo costo y su enorme comunidad global, se ha convertido en la herramienta estándar para el prototipado rápido en proyectos que van desde la automatización del hogar hasta la robótica educativa.
+            </p>
+    <section class="card-semana">
+        <h2>Demostración Visual</h2>
+        <div class="video-container">
+            <video controls poster="Recursos/img/miniatura.png">
+                <source src="Recursos/Grabación 2026-05-14 105113.mp4"
+            </video>
+            <p style="font-size: 0.9rem; margin-top: 10px; font-style: italic;">
+            </p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <span>@Noobmaster69</span>
+        <div class="logo-container">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="50"width="100">
+        </div>
+    </footer>
+
+</body>
+</html>
